@@ -3,9 +3,9 @@
 
 ## This function creates a special "matrix" object that can cache its inverse.
 ## You can create the matrix as follows
-## mat <- makeCacheMatrix(diag(5,0))
+## mat <- makeCacheMatrix(diag(5,5))
 ## mat$get() returns the matrix itself.
-## mat$set(diag(6,0)) can change the matrix to another one.
+## mat$set(diag(6,5)) can change the matrix to another one.
 ## mat$getInverseMatrix() can get the inversed matrix if it exists.
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -30,7 +30,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## the matrix has not changed), then the cachesolve should retrieve the 
 ## inverse from the cache.
 
-## After you have created a special matrix by mat <- makeCacheMatrix(diag(5,0))
+## After you have created a special matrix by mat <- makeCacheMatrix(diag(5,5))
 ## You can calculate the inversed matrix by
 ## inmat<- cacheSolve(mat)
 
